@@ -35,7 +35,7 @@ class AppointmentController extends Controller
     {
         Appointment::create($request->all());
 
-        return redirect()->back()->with(['success' => 'Appuntamento creato correttamente.']);
+        return redirect()->route('appointments.index')->with(['success' => 'Appuntamento creato correttamente.']);
     }
 
     /**
@@ -61,7 +61,7 @@ class AppointmentController extends Controller
     {
         $appointment->update($request->all());
 
-        return redirect()->back()->with(['success' => 'Appuntamento modificato correttamente.']);
+        return redirect()->route('appointments.index')->with(['success' => 'Appuntamento modificato correttamente.']);
     }
 
     /**
@@ -71,6 +71,6 @@ class AppointmentController extends Controller
     {
         $appointment->delete();
 
-        return redirect()->back()->with(['success' => 'Appuntamento eliminato correttamente.']);
+        return redirect()->route('appointments.index')->with(['success' => 'Appuntamento eliminato correttamente.']);
     }
 }
