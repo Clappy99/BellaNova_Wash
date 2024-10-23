@@ -46,7 +46,7 @@
                             <input type="ora" id="ora" name="ora" value="{{ old('ora', $appointment->ora) }}" class="form-control"
                         </div>
                         <div class="col-12 mt-5">
-                            <button type="submit" class="btn btn-primary">Crea</button>
+                            <button type="submit" class="btn btn-primary">Modifica</button>
                         </div>
                     </div>
                 </form>

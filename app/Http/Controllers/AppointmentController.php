@@ -13,8 +13,7 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointment= Appointment::all();
-        $appointment= Appointment::paginate(5);
+        $appointment= Appointment::orderBy('data')->paginate(5);
 
         return view('appointments.index', [
             'appointments' => $appointment,

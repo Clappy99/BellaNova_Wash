@@ -31,7 +31,7 @@
                     <td>{{ $appointment->surname }}</td>
                     <td>{{ $appointment->modelcar }}</td>
                     <td>{{ $appointment->description }}</td>
-                    <td>{{ $appointment->data }}</td>
+                    <td>{{ $appointment->data->format('d/m/Y') }}</td>
                     <td>{{ $appointment->ora }}</td>
                     <td class="text-end">
                         <a href="{{ route('appointments.edit', $appointment) }}" class="small fw-bold text-secondary">modifica</a>

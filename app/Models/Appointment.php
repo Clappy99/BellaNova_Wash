@@ -11,7 +11,7 @@ class Appointment extends Model
     protected function casts(): array
     {
         return [
-            // 'data' => 'timestamps',
+            'data' => 'datetime',
         ];
     }
 }
